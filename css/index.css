@@ -1,0 +1,13 @@
+#breadcrumb>ul>li.nav-item{
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+  #breadcrumb>ul>li.nav-item>a{
+    color: #d6d6d6;
+  }
+  #breadcrumb>ul>li.nav-item>a:hover{
+    color: #fafafa;
+  }
+#breadcrumb>ul>li.border-end{
+    margin: 10px 0px;
+}

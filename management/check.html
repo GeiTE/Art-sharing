@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>审核</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <style>
+        #nav{height: 100vh;width: 16.6%; background-color: #333F4B;}
+        #nav>a{background-color: #2D3843;height: 45px;color: #a1a1a1;}
+        #nav>a:hover{background-color: #232B33;color: white;}
+        #nav>.active{color: white;background-color: #232B33;}
+        .gs-link{width: 160px;height: 80px; background-color: #f9f9f9;padding: 15px;}
+    </style>
+</head>
+<body style="background-color: #F9F9F9;">
+    <div class="container-fluid">
+        <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-xl modal-dialog-scrollable">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">作品信息预览</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <div class="container">
+                    <div class="row">
+                      <div class="col-md-12 col-lg-10 offset-lg-1 d-flex justify-content-center">
+                        <figure class="figure">
+                          <img id="preview-img" src="" class="img-thumbnail figure-img img-fluid rounded shadow-sm" alt="name">
+                          <figcaption class="figure-caption text-center" id="preview-workname">作品名</figcaption>
+                        </figure>
+                      </div>
+                      <div class="col-md-12 mb-4 preview-jianjie">
+                        <hr>
+                        <p id="preview-jianjie"><label class="me-2 fw-bold">介绍：</label></p>
+                      </div>
+                      <div class="col-md-12 mb-4 preview-label" id="preview-label">
+                        <label class="me-2 fw-bold">标签：</label>
+                      </div>
+                      <div class="col-md-12 mb-2 preview-datails" id="preview-datails">
+                        <label class="me-2 fw-bold">详情：</label>
+                      </div>
+                    </div>
+                  </div>
+                  <hr>
+                  <div></div>
+                </div>
+                <!-- <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                  <button type="button" class="btn btn-primary">Save changes</button>
+                </div> -->
+              </div>
+            </div>
+          </div>
+        <div class="row">
+            <div class="col-2" style="padding-left: -15px;">
+                <nav id="nav" class="nav flex-column position-fixed start-0 top-0">
+                    <p id="admin-username" class="text-white mt-3 ms-4">Username</p>
+                    <a class="nav-link mt-1" href="./dataindex.html"><span class="mt-3 ms-4">首页</span></a>
+                    <a class="nav-link mt-1" href="./datauser.html"><span class="mt-3 ms-4">用户数据</span></a>
+                    <a class="nav-link mt-1" href="./dataworks.html"><span class="mt-3 ms-4">作品数据</span></a>
+                    <a class="nav-link mt-1 active" href="#"><span class="mt-3 ms-4">作品审核</span></a>
+                    <a class="nav-link mt-1" href="#" id="admin-break"><span class="mt-3 ms-4">退出</span></a>
+                </nav>
+            </div>
+            <div class="col-10">
+                <div class="shadow-sm rounded-1 my-2" style="width:100%;padding: 10px;background-color: white;">
+                    <span>首页 / 作品审核</span>
+                    <!-- <span style="width: 300px;" class=" float-end">
+                        <div class="input-group" style="margin-top: -3px;">
+                            <input type="text" class="form-control form-control-sm" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="button-addon2">
+                            <button class="btn btn-sm btn-primary" type="button" id="button-addon2">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                                    <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </span> -->
+                </div>
+                <div class="shadow-sm rounded-1 my-2" style="width:100%;padding: 10px;background-color: white;">
+                    <p>
+                        <span class="me-1">待审核作品总数:</span><span class="me-3" id="works_number">0</span>
+                        <!-- <span class="me-1">今日已审核作品：</span><span class="me-3">20</span> -->
+                    </p>
+                    <hr>
+                    <div class="table-responsive">
+                        <table class="table">
+                            <thead class="table-light">
+                              <tr>
+                                  <th scope="col"><input class="form-check-input" type="checkbox" value="" id="flexCheckChecked"></th>
+                                  <th scope="col">序号</th>
+                                  <th scope="col">作品名称</th>
+                                  <th scope="col">作品代号</th>
+                                  <th scope="col">用户邮箱</th>
+                                  <th scope="col">提交时间</th>
+                                  <th scope="col">操作</th>
+                              </tr>
+                            </thead>
+                            <tbody id="showdata_view">
+                                
+                            </tbody>
+                          </table>
+                    </div>
+                    <div class="row">
+                        <div class="col-2">
+                            <button class="btn btn-sm btn-outline-dark">批量删除</button>
+                        </div>
+                        <div class="col-7">
+                            <nav aria-label="Page navigation example">
+                                <ul class="pagination pagination-sm justify-content-center">
+                                  <li class="page-item disabled">
+                                    <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
+                                  </li>
+                                  <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                  <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                  <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                  <li class="page-item">
+                                    <a class="page-link" href="#">Next</a>
+                                  </li>
+                                </ul>
+                              </nav>
+                        </div>
+                        <div class="col-3">
+                            <select class="form-select form-select-sm float-start me-3" aria-label="Default select example" style="width: 100px;">
+                                <option value="1" selected>20条/页</option>
+                                <option value="2">50条/页</option>
+                                <option value="3">100条/页</option>
+                            </select>
+                            <p class="float-start">跳转到<span><input type="text" class=" form-control-sm ms-1 me-1" style="width: 40px;" value="1"></span>页<button type="button" class="btn btn-sm btn-outline-dark ms-3">确定</button></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/jquery.cookie.js"></script>
+    <script src="../js/management/admin_search.js"></script>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <script src="../js/management/check_data.js"></script>
+</body>
+</html>

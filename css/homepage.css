@@ -1,0 +1,25 @@
+#user-label>button{
+background-color: rgb(231, 231, 231);
+color: rgb(105, 105, 105);
+margin-right: 10px;
+}
+#user-label>button:hover{
+background-color: rgb(226, 226, 226);
+color: rgb(27, 27, 27);
+}
+#secon-nav{background-color: rgb(255, 255, 255);}
+#secon-nav>ul.nav>li{
+margin-left: 15px;
+}
+#secon-nav>ul.nav>li>a{
+color: rgb(122, 122, 122);
+}
+#secon-nav>ul.nav>li>a:hover{
+color: rgb(10, 10, 10);
+}
+#user-head-portrait{
+    height: 170px;width: 170px;
+    background-image: url(../images/user_head_portrait/default.svg);
+    background-size: cover; 
+    background-position:center;
+}

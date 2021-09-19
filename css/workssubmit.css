@@ -1,0 +1,18 @@
+body{
+background-color: #FAFAFA;
+}
+#file-box{
+min-height: 200px;
+border: 4px dashed rgb(216, 216, 216);
+border-radius: 10px;
+background-position: center;
+background-size: cover;
+}
+#worksct{
+margin: 15px;
+background-color:white;
+padding: 45px 45px 60px 45px;
+}
+#preview-img{
+max-height: 500px;
+}

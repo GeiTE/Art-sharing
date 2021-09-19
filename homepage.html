@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/nav.css">
+    <link rel="stylesheet" href="./css/chromagallery.min.css">
+    <link rel="stylesheet" href="./css/homepage.css">
+    <link rel="stylesheet" href="./css/card.css">
+</head>
+<body>
+    <div id="nav-dark"></div>
+    <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-dark" id="top-nav">
+          <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <a class="navbar-brand" href="./index.html">美术共享网</a>
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+              <form class="d-flex me-auto mb-2 mb-lg-0">
+                <input id="ssk" class="form-control rounded-pill" type="search" placeholder="Search" aria-label="Search">
+                <a id="ssan" class="btn" type="submit"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                  <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                </svg></a>
+              </form>
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a class="btn btn-primary me-4" id="btn-canvas">在线绘画</a>
+                </li>
+                <li class="nav-item">
+                  <a class="btn btn-primary me-4" id="btn-workssubmit">上传作品</a>
+                </li>
+                <li class="nav-item fgf">
+                  <a href="#" class="nav-link me-3">|</a>
+                </li>
+                <li class="nav-item user_login">
+                  <a class="nav-link me-4" href="./login.html">登录</a>
+                </li>
+                <li class="nav-item user_join">
+                  <a class="btn btn-outline-light" href="./join.html">加入我们</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+    <div class="container my-5">
+        <div class="row">
+            <div class="col-auto offset-3 me-5">
+              <div id="user-head-portrait" class="rounded-pill shadow-sm border border-1"></div>
+                  <!-- <img id="user-head-portrait" src="./images/user_head_portrait/default.svg" alt="头像"> -->
+            </div>
+            <div class="col-lg-5 col-md-12">
+                <h2 id="user-name" class="display-5 fw-bold mb-4">用户名</h2>
+                <!-- <p id="user-introduce" class="mb-3">我不仅仅喜欢运动还喜欢画画哟~</p> -->
+                <!-- <p id="user-address" class="text-black-50">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-geo-alt me-2" viewBox="0 0 16 16">
+                    <path d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A31.493 31.493 0 0 1 8 14.58a31.481 31.481 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94zM8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10z"/>
+                    <path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+                  </svg>
+                  广东省东莞市</p> -->
+                <p id="user-email" class="text-black-50">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope me-2" viewBox="0 0 16 16">
+                    <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2zm13 2.383-4.758 2.855L15 11.114v-5.73zm-.034 6.878L9.271 8.82 8 9.583 6.728 8.82l-5.694 3.44A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.739zM1 11.114l4.758-2.876L1 5.383v5.73z"/>
+                  </svg>
+                  myemail@163.com
+                </p>
+                <h6 class="my-4">标签</h6>
+                <div id="user-label">
+                </div>
+            </div>
+        </div>
+    </div>
+      <div id="secon-nav" class="text-white sticky-top overflow-hidden border-bottom">
+        <ul class="nav">
+          <li class="nav-item">
+            <a class="nav-link text-dark active border-bottom border-3 border-dark disabled" aria-current="page" href="#">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-images me-2" viewBox="0 0 16 16">
+                <path d="M4.502 9a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"/>
+                <path d="M14.002 13a2 2 0 0 1-2 2h-10a2 2 0 0 1-2-2V5A2 2 0 0 1 2 3a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v8a2 2 0 0 1-1.998 2zM14 2H4a1 1 0 0 0-1 1h9.002a2 2 0 0 1 2 2v7A1 1 0 0 0 15 11V3a1 1 0 0 0-1-1zM2.002 4a1 1 0 0 0-1 1v8l2.646-2.354a.5.5 0 0 1 .63-.062l2.66 1.773 3.71-3.71a.5.5 0 0 1 .577-.094l1.777 1.947V5a1 1 0 0 0-1-1h-10z"/>
+              </svg>
+              <span id="works_title">11</span>
+            </a>
+          </li>
+          <!-- <li class="nav-item">
+            <a class="nav-link" href="#">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bookmark-star-fill me-2" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M2 15.5V2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v13.5a.5.5 0 0 1-.74.439L8 13.069l-5.26 2.87A.5.5 0 0 1 2 15.5zM8.16 4.1a.178.178 0 0 0-.32 0l-.634 1.285a.178.178 0 0 1-.134.098l-1.42.206a.178.178 0 0 0-.098.303L6.58 6.993c.042.041.061.1.051.158L6.39 8.565a.178.178 0 0 0 .258.187l1.27-.668a.178.178 0 0 1 .165 0l1.27.668a.178.178 0 0 0 .257-.187L9.368 7.15a.178.178 0 0 1 .05-.158l1.028-1.001a.178.178 0 0 0-.098-.303l-1.42-.206a.178.178 0 0 1-.134-.098L8.16 4.1z"/>
+              </svg>
+              收藏
+              <span>20</span>
+            </a>
+          </li> -->
+        </ul>
+    </div>
+    <div id="data-area" class="container-fluid">
+      <div class="container" id="works_view">
+        <div class="row my-5" data-masonry="{&quot;percentPosition&quot;: true }" style="position: relative; height: 688px;">
+      
+        </div>
+    </div>
+
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/gallery/imagesloaded.min.js"></script>
+    <script src="./js/jquery.cookie.js"></script>
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./js/jquery.cookie.js"></script>
+    <script src="./js/user_search.js"></script>
+    <script src="./js/homepage_search.js"></script>
+    <script src="./js/search_box.js"></script>
+    <script src="./js/homepage_works.js"></script>
+  </body>
+</html>
