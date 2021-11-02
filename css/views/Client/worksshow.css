@@ -1,0 +1,12 @@
+figure{
+    margin-left: auto;margin-right: auto;
+}
+.plys{
+    padding-top: 15px;
+}
+#works-small-img:hover{
+  cursor: zoom-in;
+}
+#works_img{
+  width: 100%;
+}

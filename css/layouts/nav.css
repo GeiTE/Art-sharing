@@ -1,0 +1,23 @@
+#ssk{padding-right: 40px;}
+#ssan{position:relative;left: -40px;display: block;line-height: 1.5;text-align: center;text-decoration: none;user-select: none;background-color: transparent;border: 1px solid transparent;padding: .375rem .75rem;color: #212529;}
+#nav-img{
+    height: 120px;
+    background-image: url(../../images/top_img/4.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: center;
+}
+#breadcrumb{background-color: #232B33;}
+#nav-dark{width: 100%;height: 55px; background-color: black;}
+#top-nav{background-color: black;}#nav-img>.img-dark{width: 100%;height: 100%;background-color: rgba(0, 0, 0, 0.2);}
+@media (max-width: 992px){
+    #top-nav .fgf{display: none;}
+    #top-nav form input,#top-nav form a{margin-top: 30px;margin-bottom: 15px;}
+    #top-nav .navbar-nav>.nav-item{margin: 5px 0px;border-top: 1px solid #535353;padding-top: 15px;}
+    #nav-img{height: 55px;background-image: none;}
+}
+@media (min-width: 992px){
+    #top-nav{background-color: transparent;}
+}
+.cards{position: relative;}.card{position:absolute;}
+

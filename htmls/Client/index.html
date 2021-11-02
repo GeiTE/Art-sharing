@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../../css/libs/bootstrap.min.css">
+  <link rel="stylesheet" href="../../css/layouts/nav.css">
+  <link rel="stylesheet" href="../../css/layouts/card.css">
+  <link rel="stylesheet" href="../../css/views/Client/index.css">
+  <title>美术共享网站</title>
+</head>
+<body>
+  <div id="nav-img">
+    <div class="img-dark"></div>  
+  </div>
+  <div class="container-fluid">
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="top-nav">
+      <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <a class="navbar-brand" href="#">美术共享网</a>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+          <form class="d-flex me-auto mb-2 mb-lg-0">
+            <input id="ssk" class="form-control rounded-pill" type="search" placeholder="Search" aria-label="Search">
+            <a id="ssan" type="submit"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+              <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+            </svg></a>
+          </form>
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="btn btn-primary me-4" id="btn-canvas">在线绘画</a>
+            </li>
+            <li class="nav-item">
+              <a class="btn btn-primary me-4" id="btn-workssubmit">上传作品</a>
+            </li>
+            <li class="nav-item fgf">
+              <a href="#" class="nav-link me-3">|</a>
+            </li>
+            <li class="nav-item user_login">
+              <a class="nav-link me-4" href="./login.html">登录</a>
+            </li>
+            <li class="nav-item user_join">
+              <a class="btn btn-outline-light" href="./join.html">加入我们</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </div>
+  <div id="breadcrumb" class="text-white sticky-top shadow-sm overflow-hidden">
+      <ul class="nav">
+        <li class="nav-item">
+          <a class="nav-link disabled text-white active fw-bold border-bottom border-3 border-light" href="#" tabindex="-1" aria-disabled="true">首页</a>
+        </li>
+        <li class="nav-item border-end"></li>
+        <!-- <li class="nav-item">
+          <a class="nav-link" href="#">油画</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">素描</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">水彩</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">速写</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">漫画</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">书法</a>
+        </li>
+      </ul> -->
+  </div>
+
+  <div class="container mt-4 mt-xs-0" id="works_view">
+    <div class="row grid"  data-masonry="{&quot;percentPosition&quot;: true }" style="position: relative; height: 688px;">
+      
+    </div>
+  </div>
+</div>
+
+  <script src="../../js/libs/jquery.min.js"></script>
+  <script src="../../js/plugins/imagesloaded.min.js"></script>
+  <script src="../../js/views/Client/index_works_data.js"></script>
+  <script src="../../js/layouts/Client/ux.js"></script>
+  <script src="../../js/libs/bootstrap.bundle.min.js"></script>
+  <script src="../../js/plugins/jquery.cookie.js"></script>
+  <script src="../../js/layouts/Client/user_search.js"></script>
+  <script src="../../js/layouts/Client/search_box.js"></script>
+</body>
+</html>

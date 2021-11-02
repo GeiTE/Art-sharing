@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>作品</title>
+    <link rel="stylesheet" href="../../css/libs/bootstrap.min.css">
+    <link rel="stylesheet" href="../../css/layouts/nav.css">
+    <link rel="stylesheet" href="../../css/views/Client/worksshow.css">
+</head>
+<body>
+    <div id="nav-dark"></div>
+    <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-dark" id="top-nav">
+          <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <a class="navbar-brand" href="./index.html">美术共享网</a>
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+              <form class="d-flex me-auto mb-2 mb-lg-0">
+                <input id="ssk" class="form-control rounded-pill" type="search" placeholder="Search" aria-label="Search">
+                <a id="ssan" class="btn" type="submit"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                  <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                </svg></a>
+              </form>
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a class="btn btn-primary me-4" id="btn-canvas">在线绘画</a>
+                </li>
+                <li class="nav-item">
+                  <a class="btn btn-primary me-4" href="./workssubmit.html">上传作品</a>
+                </li>
+                <li class="nav-item fgf">
+                  <a href="#" class="nav-link me-3">|</a>
+                </li>
+                <li class="nav-item user_login">
+                  <a class="nav-link me-4" href="./login.html">登录</a>
+                </li>
+                <li class="nav-item user_join">
+                  <a class="btn btn-outline-light" href="./join.html">加入我们</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+      <div id="breadcrumb" class="bg-dark text-white shadow-sm sticky-top">
+        <div class="container" style="padding: 10px 0px;">
+          <div class="row" id="works_user">
+            <div class="col-lg-2 col-md-3 col-sm-8 col-7">
+                <img src="" alt="" class="rounded-pill float-start ms-3" style="height: 40px;width: 40px;background-color: white;">
+                <p class="float-start ms-2 mt-1">name</p>
+            </div>
+            <!-- <div class="col-lg-2 offset-lg-8 col-md-3 offset-md-6 col-sm-4 col-5">
+                <button class="btn btn-outline-primary">收藏</button>
+                <button class="btn btn-outline-danger ms-2">点赞</button>
+            </div> -->
+          </div>
+        </div>
+      </div>
+    <div class="container">
+        <div id="worksshow" class=" d-flex justify-content-center">
+            <figure class="figure mt-5">
+                <img src="" class="img-thumbnail figure-img img-fluid rounded shadow-sm" alt="name" style=" max-height: 450px;" id="works-small-img">
+                <figcaption class="figure-caption text-center">作品的名字.</figcaption>
+              </figure>
+        </div>
+        <div id="workstext" class="border-bottom" style="height: 60px;">
+            <div id="llcs" class=" float-start ms-3">
+                <label for="">浏览次数</label>
+                <p>3,005</p>
+            </div>
+            <div id="xhcs" class=" float-start ms-3">
+                <label for="">喜欢次数</label>
+                <p>1,008</p>
+            </div>
+            <div id="sccs" class=" float-start ms-3">
+                <label for="">收藏次数</label>
+                <p>608</p>
+            </div>
+            <button type="button" class="btn btn-outline-dark float-end"  data-bs-toggle="modal" data-bs-target="#exampleModal">信息</button>
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalLabel">信息</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p id="works_time" class="fw-light" style="font-size: 14px;">无记录</p>
+                        <div class="row mt-5 border-bottom">
+                            <div class="col-4"><p style="font-size: 13px;" class="text-black-50">观看次数</p><p>58</p><p style="font-size: 12px;" class="text-black-50">自出版以来</p></div>
+                            <!-- <div class="col-4"><p style="font-size: 13px;" class="text-black-50">收藏次数</p><p>45</p><p style="font-size: 12px;" class="text-black-50">自出版以来</p></div>
+                            <div class="col-4"><p style="font-size: 13px;" class="text-black-50">喜欢次数</p><p>50</p><p style="font-size: 12px;" class="text-black-50">自出版以来</p></div> -->
+                        </div>
+                        <div class="row mt-4" id="works_datails">
+                        </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="modal fade" id="exampleModal8" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-fullscreen">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalLabel"></h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <img id="works_img" src="" alt="">
+                    </div>
+                  </div>
+                </div>
+              </div>
+        </div>
+        <br>
+        <div id="works_introduce" class="overflow-hidden" style="max-height: 80px;">
+            
+        </div>
+        <!-- <a href="#" class=" text-black-50">展示更多</a> -->
+        <div id="works_label" class="biaoqian mt-3 border-bottom" style="height: 60px;">
+        </div>
+    </div>
+    <div class="container my-3 g3">
+        <p>评论 <span id="comment_number">0</span></p>
+        <div id="pinlun" class=" my-3">
+            <div class="row">
+                <div class="col-auto col-lg-1">
+                    <img src="" alt="" style="width: 60px;height: 60px;" class=" rounded-pill float-start mt-2">
+                </div>
+                <div class="col col-lg-9 col-md-8 col-sm-7 col-6">
+                    <textarea id="comment_content" class="form-control" rows="3" placeholder="发一条友善的评论" style="background-color: #fafafa;"></textarea>
+                </div>
+                <div class="col">
+                    <button id="comment_submit" class="btn btn-primary" style="height:100%;width:90px;">发表<br/>评论</button>
+                </div>
+            </div>
+        </div>
+        <div id="pinglunneirong" class="my-3">
+            
+        </div>
+
+    </div>
+
+    <script src="../../js/libs/jquery.min.js"></script>
+    <script src="../../js/plugins/imagesloaded.min.js"></script>
+    <script src="../../js/plugins/jquery.cookie.js"></script>
+    <script src="../../js/plugins/md5.js"></script>
+    <script src="../../js/libs/bootstrap.bundle.min.js"></script>
+    <script src="../../js/layouts/Client/user_search.js"></script>
+    <script src="../../js/layouts/Client/search_box.js"></script>
+    <script src="../../js/views/Client/worksshow.js"></script>
+    <script src="../../js/views/Client/comment.js"></script>
+</body>
+</html>
